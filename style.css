@@ -1,0 +1,333 @@
+/*
+I found very useful to include the great reset stylesheet by Richard Clark of html5doctor.com 
+It really helps you write css more easily
+*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin:0; padding:0; border:0 outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
+
+ul, ol { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; outline: 0; }
+
+table { border-collapse:collapse; border-spacing:0; }
+
+address {display:inline; }
+
+/*
+End of the reset sheet
+*/
+
+/*general stuff*/
+
+
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	color: #444444;
+	max-width: 960px;
+	margin: 15px auto 20px auto;
+	padding: 0 40px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 3px 5px rgba(0,0,0,.25);
+	box-shadow: 0 3px 5px rgba(0,0,0,.25);
+	z-index: 0;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #449ac5;
+	-webkit-transition: color .2 ease;
+	-moz-transition: color .2 ease;
+	-o-transition: color .2 ease;
+	transition: color .2 ease;
+}
+
+a:hover {
+	color: #2c7396;
+}
+
+img {
+	max-width: 100%;
+}
+
+header#blog_title {
+	padding-top: 40px;
+	margin-bottom: 20px;
+}
+
+header#blog_title h1 {
+	display: inline;
+	font-size: 60px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	letter-spacing: -2px;
+	line-height: 54px;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: #449ac5;
+	text-shadow: 0px 1px 1px #999999;
+}
+
+header#blog_title h1 a {
+	color: #449ac5;
+}
+
+header#blog_title h1 a:hover {
+	color: #449ac5;
+}
+
+/*main navigation*/
+
+nav#main_navigation {
+	width: 100%;
+	letter-spacing: 1px;
+	margin: 20px 0 20px 0;
+	font-size: 1.143em;
+	height: 40px;
+	line-height: 30px;
+	margin: 0 auto 2em auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+}
+
+nav#main_navigation ul {
+	list-style: none;
+	margin: 0 auto;
+	width: 100%;
+}
+
+nav#main_navigation ul li {
+	display: inline;
+	float: left;
+	margin: 0;
+}
+
+nav#main_navigation ul li a {
+	
+	color: #449ac5;
+	display: inline-block;
+    height: 30px;
+    padding: 5px 1.5em;
+    text-decoration: none;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+    border-top-left-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+
+nav#main_navigation ul li a:hover {
+	background: #449ac5;
+	    color: #fff;
+	    text-shadow: none;
+
+}
+
+section#content {
+	float: left;
+	width: 62%;
+	margin: 0 0px 30px 0px;
+	padding: 20px 0;
+}
+
+
+
+article.post {
+	position: relative;
+	margin: 0 0 15px 0;
+	padding: 17px 20px 0 20px;
+	font-size: .95em;
+	line-height: 1.5;
+}
+
+article.post h2 {
+	display: inline;
+	font-size: 2.3em;
+	letter-spacing: 2;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: #449ac5;
+	text-shadow: 0px 1px 1px #999999;
+}
+
+article.post header {
+	margin-bottom: 20px;
+}
+
+article.post header p {
+	font-style: italic;
+	font-size: .90em;
+	margin: 3px 0px;
+}
+
+article.post figure {
+	
+	margin: 10px 0px 10px;
+	text-align: center;
+}
+
+article.post figure figcaption {
+	font-style: italic;
+	font-size: .90em;
+	margin: 3px 0px;
+	text-align: center;
+}
+
+article.post img {
+	background: #ffffff;
+	border: 1px solid #999999;
+	display: block;
+	margin: 0px auto 3px;
+	padding: 6px;
+}
+
+
+
+div#mapcontainer {
+	max-width: 100%;
+	background: #ffffff;
+	border: 1px solid #999999;
+	display: block;
+	margin: 0px auto 3px;
+	padding: 6px;
+}
+
+div#mapcanvas {
+	max-width: 560px;
+	height: 400px;
+}
+
+video {
+	max-width: 100%;
+	background: #ffffff;
+	border: 1px solid #999999;
+	display: block;
+	margin: 0px auto 3px;
+	padding: 6px;
+}
+
+input {
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+input#videoUrl {
+	width: 70%;
+}
+
+input#address {
+
+}
+
+div#previewContainer video {
+	max-width: 30%;
+	display:inline;
+	margin-right: 5px;
+}
+
+.rot {
+	transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+
+.norot {
+	transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+}
+
+.mirror {
+	transform:scale(-1,1);
+    -moz-transform:scale(-1,1);
+    -webkit-transform:scale(-1,1);
+}
+
+.nomirror {
+	
+}
+
+footer.post_author {
+	margin-top: 20px;
+	font-style: italic;
+	font-size: .90em;
+	border-top: 1px solid #999999;
+	padding-top: 5px;
+	margin-bottom: 30px;
+}
+
+aside#sidebar {
+	margin-top: 50px;
+	float: right;
+	width: 38%;
+	
+}
+
+nav.side_navigation {
+	margin-left: 80px;
+}
+
+nav.side_navigation h5 {
+	margin-bottom: 15px;
+	margin-top: 30px;
+}
+
+nav.side_navigation ul li {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+footer#foot_note {		
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: left;
+	padding-bottom: 20px;
+	border-top: 1px solid #999999;
+}
+
+footer#foot_note p {	
+	margin: 0 0 4px 0;
+	
+	font-size: .8em; 
+	line-height: 1.5; 
+	color: rgba(0,0,0,.5);
+}
+
+
+
+div.cleaner {
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+	
+}
