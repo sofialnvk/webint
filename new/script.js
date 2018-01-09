@@ -92,6 +92,14 @@ function showPosition(position) {
   document.getElementById('geolocation-form').addEventListener('submit',function(){return false;},true);
 */
 
+/* Capture a preview of the video */
+function capture() {
+  var scalefactor = 0.5;
+  var canvas = document.getElementById('canvas');
+  var video = document.getElementById('video');
+  canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight, 0, 0, canvas.width, canvas.height);
+  console.log(video.videoWidth);
+}
 
 /* Set time for video */ 
 function setStartTime() { 
@@ -99,6 +107,14 @@ function setStartTime() {
     var setTime = document.getElementById('newTime').value;
     vid.currentTime = setTime;
 } 
+
+/* Fix this!! enable button when field is not empty*/
+function enableBtn() {
+  var url = document.getElementById('newUrl').value;
+  if (url != '') {
+    document.getElementById("update-url").disabled = false; 
+  }
+}
 
 /* VIDEO CODE */
 function updateUrl() {

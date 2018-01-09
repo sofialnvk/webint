@@ -80,8 +80,8 @@
       </div>
 
       <div id="videoPost" class="tabcontent">
-        <video id="video" controls>
-          <source id="videoSource" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d6/Elaphants_Dream.ogv/Elaphants_Dream.ogv.480p.webm" type="video/ogg">
+        <video id="video" poster="https://openclipart.org/image/2400px/svg_to_png/221491/Movie-Projector-Icon.png" controls>
+          <source id="videoSource" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d6/Elaphants_Dream.ogv/Elaphants_Dream.ogv.480p.webm" type="video/ogg" preload="metadata">
           </video>
           <form>
             <div class="float-left">
@@ -89,11 +89,11 @@
               <br>
               <input type="text" name="startTime" id="newTime" placeholder="Start time">
               <br>
-              <input type="button" id="preview" onclick="preview()" value="Preview"/>
+              <input type="button" id="preview" onclick="capture()" value="Preview"/>
               <p>Hide default controls:</p>
             </div>
             <div class="float-right">
-              <input type="button" id="update-url" onclick="updateUrl()" value="Update"/>
+              <input type="button" id="update-url" onclick="updateUrl()" value="Update" disabled/>
               <br>
               <input type="button" id="update-start-time" onclick="setStartTime()" value="Jump to"/>
               <br>
@@ -102,6 +102,7 @@
               <input id="checkBox" onclick="displayControls()" type="checkbox">
             </div>
           </form>
+          <canvas id="canvas"></canvas>
         </div>
 
         <div id="videoPlayerPost" class="tabcontent">
