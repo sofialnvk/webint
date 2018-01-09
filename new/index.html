@@ -3,14 +3,16 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" type="text/css"/>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script type="text/javascript" src="script.js"></script>
-  <script async defer
+  
+  <!--<script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSRk678ewGp26iNGG0IWN1BL8VlGRd4dQ&callback=myMap">
-  </script>
+  </script>-->
   <title>Social Network</title>
 </head>
 
-<body>
+<body onload="myNewSrc()">
 
   <header id="top-bar">
     <!-- <h1>Hello World</h1> -->
@@ -56,7 +58,34 @@
       </div>
 
       <div id="mapPost" class="tabcontent">
-        <form>
+
+        <article>
+          <header>
+            <h1>Let's try to be geolocalized</h1>
+          </header>
+          <p>
+        We will be trying to display a map with current location. Follow the
+        instructions to display the map  : <br/>
+        </p>
+          <form id="geolocation-form" method="post" action="#" onSubmit = "return false">
+
+            <input type="button" id="init-map" value="Show my location!"/>
+            <div id="google-map">Please click on the button to display the map</div>
+
+            <p>Now, you can also enter a specific location, and display it on the map : </p>
+            <input type="text" id="location-box" />
+            <input type="button" id="update-map" value="Update the map"/>
+
+          </form>
+
+        <p>So? Any comments?</p>
+
+          <footer>
+            <time datetime="2010-12-11">Blog post issued on december, 11th 2010</time>
+          </footer>
+        </article>
+
+        <!--<form>
           <div id="google-map"></div>
           <h3>Update Location:</h3>
           <div class="float-left">
@@ -76,7 +105,7 @@
             <br>
             <input type="button" id="update-map" value="Update the map"/>
           </div>
-        </form>
+        </form>-->
       </div>
 
       <div id="videoPost" class="tabcontent">
@@ -105,8 +134,10 @@
         </div>
 
         <div id="videoPlayerPost" class="tabcontent">
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+          <video id="video1" preload="auto" onended="myAddListener()" autoplay controls width="480" height="360" title="" poster="https://placehold.it/350x150">
+        <source src="" type="video/mp4">
+        </video>
+          <p id="display-message">Now playing video 1/4.</p>
         </div>
       </section>
 
