@@ -5,33 +5,34 @@
   <link rel="stylesheet" href="style.css" type="text/css"/>
   <script type="text/javascript" src="script.js"></script>
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSRk678ewGp26iNGG0IWN1BL8VlGRd4dQ&callback=myMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSRk678ewGp26iNGG0IWN1BL8VlGRd4dQ&callback=myMap">
   </script>
   <title>Social Network</title>
 </head>
 
 <body>
 
-<header id="top-bar">
-  <!-- <h1>Hello World</h1> -->
-  <img src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg" alt="logo" id="top-img">
-</header>
+  <header id="top-bar">
+    <!-- <h1>Hello World</h1> -->
+    <img src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg" alt="logo" id="top-img">
+  </header>
 
-<div class="container">
-  <aside id="sidebar-left" class="sidebars menuitem">
-    <!-- add nav to the sidebars -->
-    <img src"https://www.davehompes.com/wp-content/uploads/2016/03/bigstock-Profile-Icon-Female-Avatar-Wom-99305540-100x100.jpg" alt="profile picture" id="profile-pic">
-    <h4>Jane Doe</h4>
-  </aside>
+  <div class="container">
+    <aside id="sidebar-left" class="sidebars menuitem">
+      <!-- add nav to the sidebars -->
+      <img src"https://www.davehompes.com/wp-content/uploads/2016/03/bigstock-Profile-Icon-Female-Avatar-Wom-99305540-100x100.jpg" alt="profile picture" id="profile-pic">
+      <h4>Jane Doe</h4>
+    </aside>
 
-  <!-- Holds several articles (posts) -->
-  <section id="content">
-    <div class="tab">
+    <!-- Holds several articles (posts) -->
+    <section id="content">
+      <div class="tab">
         <button class="tablinks" onclick="openPost(event, 'formPost')">Post</button>
         <button class="tablinks" onclick="openPost(event, 'mapPost')">Event</button>
         <button class="tablinks" onclick="openPost(event, 'videoPost')">Video</button>
         <button class="tablinks" onclick="openPost(event, 'videoPlayerPost')">Video Player</button>
       </div>
+
 
       <div id="formPost" class="tabcontent">
         <form>
@@ -55,7 +56,8 @@
       </div>
 
       <div id="mapPost" class="tabcontent">
-        <div id="google-map"></div>
+        <form>
+          <div id="google-map"></div>
           <h3>Update Location:</h3>
           <div class="float-left">
             <p>Street:</p>
@@ -74,46 +76,48 @@
             <br>
             <input type="button" id="update-map" value="Update the map"/>
           </div>
+        </form>
       </div>
 
       <div id="videoPost" class="tabcontent">
         <video id="video" controls>
-          <source id="videoSource" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d6/Elaphants_Dream.ogv/Elaphants_Dream.ogv.480p.webm" type="video/ogg">   <script type="text/javascript">
-            </script>
-        </video>
-        <div class="float-left">
-            <input type="text" name="newUrl" placeholder="New url">
-            <br>
-            <input type="text" name="startTime" placeholder="Start time">
-            <br>
-            <input type="button" id="preview" onclick="preview()" value="Preview"/>
-            <p>Hide default controls:</p>
-          </div>
-          <div class="float-left">
-            <input type="button" id="update-url" onclick="updateUrl()" value="Update"/>
-            <br>
-            <input type="button" id="update-start-time" onclick="setStartTime()" value="Jump to"/>
-            <br>
-            <input type="button" id="rotate" onclick="rotate()" value="Rotate"/>
-            <br>
-            <input id="checkBox" onclick="displayControls()" type="checkbox">
-          </div>
-      </div>
+          <source id="videoSource" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d6/Elaphants_Dream.ogv/Elaphants_Dream.ogv.480p.webm" type="video/ogg">
+          </video>
+          <form>
+            <div class="float-left">
+              <input type="url" name="newUrl" id="newUrl" placeholder="New url">
+              <br>
+              <input type="text" name="startTime" id="newTime" placeholder="Start time">
+              <br>
+              <input type="button" id="preview" onclick="preview()" value="Preview"/>
+              <p>Hide default controls:</p>
+            </div>
+            <div class="float-right">
+              <input type="button" id="update-url" onclick="updateUrl()" value="Update"/>
+              <br>
+              <input type="button" id="update-start-time" onclick="setStartTime()" value="Jump to"/>
+              <br>
+              <input type="button" id="rotate" onclick="rotate()" value="Rotate"/>
+              <br>
+              <input id="checkBox" onclick="displayControls()" type="checkbox">
+            </div>
+          </form>
+        </div>
 
-      <div id="videoPlayerPost" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
-      </div>
-  </section>
+        <div id="videoPlayerPost" class="tabcontent">
+          <h3>Tokyo</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+      </section>
 
-  <aside id="sidebar-right" class="sidebars">
-    <!-- add nav and list to the sidebars -->
-    <h2>Contacts</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  </aside>
-</div>
+      <aside id="sidebar-right" class="sidebars">
+        <!-- add nav and list to the sidebars -->
+        <h2>Contacts</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+      </aside>
+    </div>
 
-<footer id="foot-note">Social Network | WebInt 2018</footer>  
+    <footer id="foot-note">Social Network | WebInt 2018</footer>  
 
-</body>
-</html>
+  </body>
+  </html>

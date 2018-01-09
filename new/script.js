@@ -92,21 +92,21 @@ function showPosition(position) {
   document.getElementById('geolocation-form').addEventListener('submit',function(){return false;},true);
 */
 
+
+/* Set time for video */ 
+function setStartTime() { 
+    var vid = document.getElementById('video');
+    var setTime = document.getElementById('newTime').value;
+    vid.currentTime = setTime;
+} 
+
 /* VIDEO CODE */
 function updateUrl() {
-    var video = document.getElementById('video');
-    var source = document.getElementById("videoSource");
-    source.src= "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/80/Trackingshot.ogv/Trackingshot.ogv.480p.webm"; //"https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d6/Elaphants_Dream.ogv/Elaphants_Dream.ogv.480p.webm";
-    console.log(videoSource);
-    video.appendChild(source);
-    video.play();
-}
-
-function setStartTime() {
-    var startTime = document.getElementById("startTime");
-    document.getElementById('video').addEventListener('loadedmetadata', function() {
-      this.currentTime = 10;
-    }, false);
+  var vid = document.getElementById('video');
+  var url = document.getElementById('newUrl').value;
+  vid.src = url;
+  vid.load();
+  video.play()
 }
 
 //Rotates the video 23 degrees if it is not already rotated. Otherwise rotates video back to 0 degrees.
