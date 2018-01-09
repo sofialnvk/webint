@@ -91,6 +91,33 @@ function showPosition(position) {
   //pressing "enter" when focused on the location field should return false...but I had to hard-code it in the HTML
   document.getElementById('geolocation-form').addEventListener('submit',function(){return false;},true);
 */
+/*
+function jukeBox{
+  var video = document.createElement("video");
+  var source = document.createElement("source"); 
+  source.type = "video/ogg";
+  var videos = ["https://upload.wikimedia.org/wikipedia/commons/transcoded/3/36/History_of_the_Lake_Eola_Fountain.webm/History_of_the_Lake_Eola_Fountain.webm.240p.webm", "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/60/SunRail_Grand_Opening_at_Church_Street.webm/SunRail_Grand_Opening_at_Church_Street.webm.480p.webm", "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/83/SunRail_Grand_Opening_at_Florida_Hospital.webm/SunRail_Grand_Opening_at_Florida_Hospital.webm.480p.webm"];
+  for(int i = 0; i < videos.length; i++){
+    source.src = videos[i];
+    video.appendChild(source);
+    video.load();
+    video.play();
+  }
+} */
+
+
+var videos = ["https://upload.wikimedia.org/wikipedia/commons/transcoded/3/36/History_of_the_Lake_Eola_Fountain.webm/History_of_the_Lake_Eola_Fountain.webm.240p.webm", "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/60/SunRail_Grand_Opening_at_Church_Street.webm/SunRail_Grand_Opening_at_Church_Street.webm.480p.webm", "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/83/SunRail_Grand_Opening_at_Florida_Hospital.webm/SunRail_Grand_Opening_at_Florida_Hospital.webm.480p.webm"];
+var called = 0;
+/* Function to play 4 videos */
+function jukeBox(){
+  var vid = document.getElementById('videoJukeBox');
+  vid.src = videos[called];
+  vid.load();
+  vid.play()
+  document.getElementById("videoMessage").innerHTML = "Playing video " + (called+2) + "/4";
+  called++;
+
+}
 
 /* Capture a preview of the video */
 function capture() {
@@ -122,7 +149,7 @@ function updateUrl() {
   var url = document.getElementById('newUrl').value;
   vid.src = url;
   vid.load();
-  video.play()
+  vid.play()
 }
 
 //Rotates the video 23 degrees if it is not already rotated. Otherwise rotates video back to 0 degrees.

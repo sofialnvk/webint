@@ -106,8 +106,10 @@
         </div>
 
         <div id="videoPlayerPost" class="tabcontent">
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+          <video id="videoJukeBox" controls onended="jukeBox()">
+            <source id="sourceJukeBox" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/38/City_Hall_Memorial_for_Pulse_Victims.webm/City_Hall_Memorial_for_Pulse_Victims.webm.480p.webm" type="video/mp4">
+          </video>
+          <p id="videoMessage">Playing video 1/4</p>
         </div>
       </section>
 
