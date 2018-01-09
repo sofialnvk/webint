@@ -2,14 +2,25 @@
   box-sizing: border-box;
 }
 
-.container {
-  overflow:auto;
+body {
+  font-family:Verdana;
+  color:#aaaaaa;
+  margin: 0;
 }
 
-#sidebar-left {
-  float:left;
-  width:20%;
-  text-align:center;
+ul {
+  list-style-type: none;
+  float: left;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+.container {
+  height: auto;
+  margin-bottom: 70px;
 }
 
 .menuitem {
@@ -30,21 +41,50 @@
   width: 70%;
   height: 70%;
   display: block;
+  border-radius: 50%;
+}
+
+#top-bar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #464F51; /*#333;*/
+  padding: 5px;
+  height: 70px;
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+
+#foot-note{
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+#sidebar-left {
+  height: 100%;
+  background-color: #AAACB0; /*#333;*/
+  float:left;
+  width:20%;
+  text-align:center;
 }
 
 #sidebar-right {
-  background-color:#333;
+  height: 100%;
+  background-color: #AAACB0; /*#333;*/
   float:left;
   width:20%;
   padding:15px;
   margin-top:0px;
-  text-align:center;
+  /*text-align:center;*/
 }
 
-body {
-  font-family:Verdana;
-  color:#aaaaaa;
-  margin: 0;
+h2#h2-contacts {
+  padding-left: 15%; 
+  color: white;
 }
 
 @media only screen and (max-width:620px) {
@@ -64,21 +104,7 @@ body {
   width: 10%; 
 }
 
-#top-bar {
-  background-color:#333;
-  padding: 5px;
-  height: 70px;
-  overflow: hidden;
-}
 
-#foot-note{
-  position: relative;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-  text-align: center;
-}
 
 /* POST 1 - FORM WITH PERSONAL INFO */
 /* Style the tab */
