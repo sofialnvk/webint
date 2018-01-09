@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  overflow:auto;
+}
+
+#sidebar-left {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+
+.menuitem {
+  background-color:#333;
+  padding:8px;
+  margin-top:0px;
+}
+
+#content {
+  float:left;
+  width:60%;
+  padding:0 20px;
+}
+
+#profile-pic{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 70%;
+  display: block;
+}
+
+#sidebar-right {
+  background-color:#333;
+  float:left;
+  width:20%;
+  padding:15px;
+  margin-top:0px;
+  text-align:center;
+}
+
+body {
+  font-family:Verdana;
+  color:#aaaaaa;
+  margin: 0;
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  #sidebar-left, #content, #sidebar-right {
+    width:100%;
+  }
+}
+
+#top-img {
+  /* max-width: 100%; */
+  position: absolute;
+  /* left: 0px; */
+  float: left;
+  padding: 10px;
+  height: 10%; 
+  width: 10%; 
+}
+
+#top-bar {
+  background-color:#333;
+  padding: 5px;
+  height: 70px;
+  overflow: hidden;
+}
+
+#foot-note{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+
