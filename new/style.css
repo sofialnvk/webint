@@ -6,18 +6,29 @@ body {
   margin: 0;
 }
 
-article {
+article.post {
   background-color: white;
   margin-bottom: 10px;
-  padding: 3%
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
 }
 
+header.post_header {
+  background-color: #dae2ea;
+  padding: 10px 0;
+}
+
+h3 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  float: left;
+  text-align: left;
+}
 
 .container {
   overflow:auto;
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
 }
 
 #top-bar {
@@ -27,30 +38,24 @@ article {
   overflow: hidden;
 }
 
-#sidebar-left, #sidebar-left, #content {
-  width: 100%;
-  float: left;
-}
-
 #sidebar-left {
-  /*float:left;
+  float:left;
   width:20%;
   margin-top: 7px;
   margin-left: 7px;
-  text-align:center;*/
+  text-align:center;
   background-color: white;
   margin-top: 7px;
 }
 
 #sidebar-right {
   background-color: white;
-  margin-top: 7px;
-  /*float:left;
+  float:left;
   width:20%;
   padding:15px;
   margin-top: 7px;
   margin-right: 7px;
-  text-align:center;*/
+  text-align:center;
 }
 
 .menuitem {
@@ -60,12 +65,12 @@ article {
 }
 
 #content {
+  padding: 25px;
   margin-top: 7px;
   display: inline-block;
-  /*float:left;
-  margin-top: 7px;
+  float:left;
   width:58.7%;
-  padding:0 10px;*/
+  padding:0 10px;
 }
 
 #profile-pic{
@@ -84,41 +89,14 @@ body {
   background-color:#aaaaaa;
 }
 
-/*@media only screen and (max-width:620px) {
-  /* For mobile phones: 
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
   #sidebar-left, #content, #sidebar-right {
     width:100%;
   }
-}*/
-
-@media only screen and (min-width: 1024px) {
-  .container {
-    width: 1024px;
-    margin: 0 auto;
-  }
-
-  #content {
-    width: 50%;
-    float: left;
-  }
-
-  #sidebar-left {
-    width: 25%;
-    float: left;
-
-  }
-
-  #sidebar-right {
-    width: 1024px;
-    margin: 0 auto;
-  }
 }
 
-@media only screen and (min-width: 1200px) {
-  .container {
-    width: 1140px;
-    margin: 0 auto;
-}
+
 
 #top-img {
   /* max-width: 100%; */
@@ -140,13 +118,6 @@ body {
   text-align: center;
 }
 
-/* POST 1 - FORM WITH PERSONAL INFO */
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
 
 /* FORM 2 - GEO-LOCATION AND MAP */
 .float-left {
@@ -167,9 +138,14 @@ body {
 
 /* FORM 3 - VIDEO */
 video {
- width: 65%;
- height: 40%;
- border: 1px solid #202020;
+  width: 65%;
+  height: 40%;
+  border: 1px solid #202020;
+
+}
+
+.center-video {
+  text-align: center;
 }
 
 

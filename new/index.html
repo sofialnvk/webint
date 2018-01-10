@@ -28,25 +28,21 @@
       <!--Post #0-->
       <article class="post">
         <header class="post_header">
-          <h3><a href="#">Forms</a></h3>
+          <h3>Forms</h3>
         </header>
         <form>
           <p>First name:</p>
           <input type="text" name="firstname" value="">
-          <br>
           <p>Last name:</p>
           <input type="text" name="lastname" value="">
-          <br>
           <p>Email:</p>
           <input type="email" name="email" value="">
-          <br>
           <p>Phone:</p>
           <input type="tel" name="phone" value="">
-          <br>
           <p>Post:</p>
           <input type="text" name="post" value="">
           <br>
-          <input type="submit" value="Submit">
+          <input type="submit" class="button" value="Submit">
         </form>  
         <footer class="post_author">
           <span> <a href="#" >Comment</a></span>
@@ -57,28 +53,21 @@
 
       <article class="post">
         <header class="post_header">
-          <h3><a href="#">Maps</a></h3>
+          <h3>Maps</h3>
         </header>
         <form>
           <div id="google-map"></div>
-          <h3>Update Location:</h3>
-          <div class="float-left">
+          <h4>Update Location:</h4>
             <p>Street:</p>
             <input id="street" type="text" name="street" value="">
-            <br>
             <p>City:</p>
             <input type="text" name="city" value="">
-            <br>
-          </div>
-          <div class="float-left">
             <p>Zip Code:</p>
             <input type="text" name="zipCode" value="">
-            <br>
             <p>Country:</p>
             <input type="text" name="country" value="">
             <br>
-            <input type="button" id="update-map" value="Update the map"/>
-          </div>
+            <input type="button" class="button" id="update-map" value="Update the map"/>
         </form> 
         <footer class="post_author">
           <span> <a href="#" >Comment</a></span>
@@ -89,27 +78,24 @@
 
       <article class="post">
         <header class="post_header">
-          <h3><a href="#">Videos</a></h3>
+          <h3>Videos</h3>
         </header>
-        <video id="video" poster="https://openclipart.org/image/2400px/svg_to_png/221491/Movie-Projector-Icon.png" controls>
-          <source id="videoSource" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d6/Elaphants_Dream.ogv/Elaphants_Dream.ogv.480p.webm" type="video/ogg" preload="metadata">
+        <div class="center-video">
+          <video id="video" poster="https://openclipart.org/image/2400px/svg_to_png/221491/Movie-Projector-Icon.png" controls>
+            <source id="videoSource" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d6/Elaphants_Dream.ogv/Elaphants_Dream.ogv.480p.webm" type="video/ogg" preload="metadata">
           </video>
+        </div>
           <form>
             <div class="float-left">
               <input type="url" name="newUrl" id="newUrl" placeholder="New url">
-              <br>
               <input type="text" name="startTime" id="newTime" placeholder="Start time">
-              <br>
               <input type="button" id="preview" onclick="capture()" value="Preview"/>
               <p>Hide default controls:</p>
             </div>
             <div class="float-right">
               <input type="button" id="update-url" onclick="updateUrl()" value="Update" disabled>
-              <br>
               <input type="button" id="update-start-time" onclick="setStartTime()" value="Jump to"/>
-              <br>
               <input type="button" id="rotate" onclick="rotateVideo()" value="Rotate"/>
-              <br>
               <input id="checkBox" onclick="displayControls()" type="checkbox">
             </div>
           </form>
@@ -123,11 +109,13 @@
 
       <article class="post">
         <header class="post_header">
-          <h3><a href="#">Jukebox</a></h3>
+          <h3>Jukebox</h3>
         </header>
-        <video id="videoJukeBox" controls onended="jukeBox()">
+        <div class="center-video">
+          <video id="videoJukeBox" controls onended="jukeBox()">
             <source id="sourceJukeBox" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/38/City_Hall_Memorial_for_Pulse_Victims.webm/City_Hall_Memorial_for_Pulse_Victims.webm.480p.webm" type="video/mp4">
           </video>
+        </div>
           <p id="videoMessage">Playing video 1/4</p>
         <footer class="post_author">
           <span> <a href="#" >Comment</a></span>
@@ -139,8 +127,30 @@
 
       <aside id="sidebar-right" class="sidebars">
         <!-- add nav and list to the sidebars -->
-        <h2>Contacts</h2>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        <h2>Contact List</h2>
+        <ul id="contact-list">
+          <li>Sofia Linevik</li>
+          <li>Tea Nygren</li>
+          <li>Jenny Tellne</li>
+          <li>Emil Juopperi</li>
+          <li>Simon Agmell</li>
+          <li>Maren Rektangel</li>
+          <li>Lina Snortsson</li>
+          <li>Sofia Linevik</li>
+          <li>Tea Nygren</li>
+          <li>Jenny Tellne</li>
+          <li>Emil Juopperi</li>
+          <li>Simon Agmell</li>
+          <li>Maren Rektangel</li>
+          <li>Lina Snortsson</li>
+          <li>Sofia Linevik</li>
+          <li>Tea Nygren</li>
+          <li>Jenny Tellne</li>
+          <li>Emil Juopperi</li>
+          <li>Simon Agmell</li>
+          <li>Maren Rektangel</li>
+          <li>Lina Snortsson</li>
+        </ul>
       </aside>
     </div>
 
