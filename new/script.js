@@ -19,6 +19,8 @@ function myMap() {
 
 if(!!navigator.geolocation) {
         var map;
+        var lat;
+        var lng;
         var mapOptions = {
             zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -28,13 +30,17 @@ if(!!navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
   
             var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            lat = position.coords.latitude;
+            lng = position.coords.longitude;
+            console.log(lat);
+            console.log(lng);
             var infowindow = new google.maps.InfoWindow({
                 map: map,
                 position: geolocate,
                 content:
-                    '<h1>Location pinned from HTML5 Geolocation!</h1>' +
-                    '<h2>Latitude: ' + position.coords.latitude + '</h2>' +
-                    '<h2>Longitude: ' + position.coords.longitude + '</h2>'
+                    '<h2>Current location: </h2>' +
+                    '<h3>Lat: ' + position.coords.latitude + '</h3>' +
+                    '<h3>Long: ' + position.coords.longitude + '</h3>'
             });
             map.setCenter(geolocate);
             google.maps.event.trigger(map, 'resize');
@@ -44,10 +50,39 @@ if(!!navigator.geolocation) {
         document.getElementById('google-maps').innerHTML = 'No Geolocation Support.';
     }
     var geocoder = new google.maps.Geocoder();
+    var infowindow = new google.maps.InfoWindow;
     document.getElementById('update-map').addEventListener('click', function() {
       geocodeAddress(geocoder, map);
     });
+
+    geocodeLatLng(geocoder,map,infowindow, lat, lng);
 };
+
+function geocodeLatLng(geocoder, map, infowindow, latT, lngG) {
+        //var input = document.getElementById('latlng').value;
+        //var latlngStr = latlng.split(',', 2);
+        console.log(latT);
+        console.log(lngG);
+        var latlng = {lat: parseFloat(latT), lng: parseFloat(lngG)};
+        console.log(latlng);
+        geocoder.geocode({'location': latlng}, function(results, status) {
+          if (status === 'OK') {
+            if (results[0]) {
+              map.setZoom(11);
+              var marker = new google.maps.Marker({
+                position: latlng,
+                map: map
+              });
+              infowindow.setContent(results[0].formatted_address);
+              infowindow.open(map, marker);
+            } else {
+              window.alert('No results found');
+            }
+          } else {
+            window.alert('Geocoder failed due to: ' + status);
+          }
+        });
+      }
 
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementById('street').value;
