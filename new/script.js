@@ -135,13 +135,20 @@ function setStartTime() {
     vid.currentTime = setTime;
 } 
 
-/* Fix this!! enable button when field is not empty*/
+/*
+/* Fix this!! enable button when field is not empty
 function enableBtn() {
-  var url = document.getElementById('newUrl').value;
+  /* var url = document.getElementById('newUrl').value;
   if (url != '') {
     document.getElementById("update-url").disabled = false; 
+  } 
+  var url = document.getElementById('newUrl');
+  btn = document.getElementById('update-url');
+  if (url.value){
+    btn.disabled = false;
   }
 }
+*/
 
 /* VIDEO CODE */
 function updateUrl() {
@@ -154,7 +161,7 @@ function updateUrl() {
 
 //Rotates the video 23 degrees if it is not already rotated. Otherwise rotates video back to 0 degrees.
 var rotated = false;
-function rotate() {
+function rotateVideo() {
     var video = document.getElementById("video");
     deg = rotated ? 0 : 23;
     video.style.transform = 'rotate('+deg+'deg)';
