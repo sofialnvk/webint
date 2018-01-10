@@ -37,12 +37,35 @@ if(!!navigator.geolocation) {
                     '<h2>Longitude: ' + position.coords.longitude + '</h2>'
             });
             map.setCenter(geolocate);
+            google.maps.event.trigger(map, 'resize');
         });
         
     } else {
         document.getElementById('google-maps').innerHTML = 'No Geolocation Support.';
     }
+    var geocoder = new google.maps.Geocoder();
+    document.getElementById('update-map').addEventListener('click', function() {
+      geocodeAddress(geocoder, map);
+    });
 };
+
+function geocodeAddress(geocoder, resultsMap) {
+  var address = document.getElementById('street').value;
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === 'OK') {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
+
+
 
 
 var videos = ["https://upload.wikimedia.org/wikipedia/commons/transcoded/3/36/History_of_the_Lake_Eola_Fountain.webm/History_of_the_Lake_Eola_Fountain.webm.240p.webm", "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/60/SunRail_Grand_Opening_at_Church_Street.webm/SunRail_Grand_Opening_at_Church_Street.webm.480p.webm", "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/83/SunRail_Grand_Opening_at_Florida_Hospital.webm/SunRail_Grand_Opening_at_Florida_Hospital.webm.480p.webm"];
