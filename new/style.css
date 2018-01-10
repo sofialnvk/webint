@@ -67,7 +67,7 @@ ul {
 #contact-list > li {
   font-size: 0.8em;
   width: 100%;
-  color: grey;
+  color: gray;
   padding-bottom: 5px; 
 }
 
@@ -218,11 +218,15 @@ video {
   width: 65%;
   height: 40%;
   border: 1px solid #202020;
-
 }
 
 .center-video {
   text-align: center;
+}
+
+#video1 {
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 
