@@ -31,23 +31,55 @@
           <h3>Forms</h3>
         </header>
         <form>
-          <p>First name:</p>
-          <input type="text" name="firstname" value="">
-          <p>Last name:</p>
-          <input type="text" name="lastname" value="">
-          <p>Email:</p>
-          <input type="email" name="email" value="">
-          <p>Phone:</p>
-          <input type="tel" name="phone" value="">
-          <p>Post:</p>
-          <input type="text" name="post" value="">
+          <table>
+            <tr>
+              <td>
+                <p>First name</p>
+              </td>
+              <td>
+                <input type="text" name="firstname" value="">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Last name</p>
+              </td>
+              <td>
+                <input type="text" name="lastname" value="">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Email</p>
+              </td>
+              <td>
+                <input type="email" name="email" value="">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Phone</p>
+              </td>
+              <td>
+                <input type="tel" name="phone" value="">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Post</p>
+              </td>
+              <td>
+                <input type="text" name="post" value="">
+              </td>
+            </tr>
+          </table>
           <br>
           <input type="submit" class="button" value="Submit">
         </form>  
         <footer class="post_author">
-          <span> <a href="#" >Comment</a></span>
-          <span> | <a href="#" >Like</a></span>
-          <span> | <a href="#" >Share</a></span>
+          <span> <a>Comment</a></span>
+          <span> | <a>Like</a></span>
+          <span> | <a>Share</a></span>
         </footer> 
       </article>
 
@@ -58,6 +90,42 @@
         <form>
           <div id="google-map"></div>
           <h4>Update Location:</h4>
+
+            <table>
+            <tr>
+              <td>
+                <p>Street</p>
+              </td>
+              <td>
+                <input id="street" type="text" name="street" value="">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>City</p>
+              </td>
+              <td>
+                <input type="text" name="city" value="">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Zip Code</p>
+              </td>
+              <td>
+                <input type="text" name="zipCode" value="">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Country</p>
+              </td>
+              <td>
+                <input type="text" name="country" value="">
+              </td>
+            </tr>
+          </table>
+            <!-- 
             <p>Street:</p>
             <input id="street" type="text" name="street" value="">
             <p>City:</p>
@@ -65,14 +133,14 @@
             <p>Zip Code:</p>
             <input type="text" name="zipCode" value="">
             <p>Country:</p>
-            <input type="text" name="country" value="">
+            <input type="text" name="country" value=""> -->
             <br>
             <input type="button" class="button" id="update-map" value="Update the map"/>
         </form> 
         <footer class="post_author">
-          <span> <a href="#" >Comment</a></span>
-          <span> | <a href="#" >Like</a></span>
-          <span> | <a href="#" >Share</a></span>
+          <span> <a>Comment</a></span>
+          <span> | <a>Like</a></span>
+          <span> | <a>Share</a></span>
         </footer> 
       </article>
 
@@ -85,17 +153,17 @@
             <source id="videoSource" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d6/Elaphants_Dream.ogv/Elaphants_Dream.ogv.480p.webm" type="video/ogg" preload="metadata">
           </video>
         </div>
-          <form>
+          <form class="video-controls">
             <div class="float-left">
               <input type="url" name="newUrl" id="newUrl" placeholder="New url">
               <input type="text" name="startTime" id="newTime" placeholder="Start time">
               <input type="button" id="preview" onclick="capture()" value="Preview"/>
-              <p>Hide default controls:</p>
+              <label>Hide default controls:</label>
             </div>
             <div class="float-right">
-              <input type="button" id="update-url" onclick="updateUrl()" value="Update" disabled>
+              <input type="button" id="update-url" onclick="updateUrl()" value="Update">
               <input type="button" id="update-start-time" onclick="setStartTime()" value="Jump to"/>
-              <input type="button" id="rotate" onclick="rotateVideo()" value="Rotate"/>
+              <input type="button" id="rotate" onclick="rotateVideo()" value="Rotate"/>      
               <input id="checkBox" onclick="displayControls()" type="checkbox">
             </div>
           </form>
@@ -129,27 +197,12 @@
         <!-- add nav and list to the sidebars -->
         <h2>Contact List</h2>
         <ul id="contact-list">
+          <li>Emil Juopperi</li>
           <li>Sofia Linevik</li>
           <li>Tea Nygren</li>
           <li>Jenny Tellne</li>
-          <li>Emil Juopperi</li>
           <li>Simon Agmell</li>
           <li>Maren Rektangel</li>
-          <li>Lina Snortsson</li>
-          <li>Sofia Linevik</li>
-          <li>Tea Nygren</li>
-          <li>Jenny Tellne</li>
-          <li>Emil Juopperi</li>
-          <li>Simon Agmell</li>
-          <li>Maren Rektangel</li>
-          <li>Lina Snortsson</li>
-          <li>Sofia Linevik</li>
-          <li>Tea Nygren</li>
-          <li>Jenny Tellne</li>
-          <li>Emil Juopperi</li>
-          <li>Simon Agmell</li>
-          <li>Maren Rektangel</li>
-          <li>Lina Snortsson</li>
         </ul>
       </aside>
     </div>

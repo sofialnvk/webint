@@ -4,35 +4,98 @@
 
 body {
   margin: 0;
+  font-family: "Helvetica"
+}
+
+aside {
+  box-shadow: 0 0px 7px 0 #969696;
+  border-radius: 4px;
+    padding: 5px;
+}
+
+article.post td > p {
+  margin: 0;
+}
+
+article.post td {
+  text-align: right;
+  padding-right: 3px;
+  height: 10px;
+}
+
+article.post > form > table {
+  margin: auto;
+}
+
+article.post > form > input {
+  margin: auto;
+  display: block;
 }
 
 article.post {
-  background-color: white;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+    margin-bottom: 10px;
+    box-shadow: 0 0px 7px 0 #969696;
 }
 
 header.post_header {
-  background-color: #dae2ea;
   padding: 10px 0;
 }
 
 h3 {
   text-align: center;
+  margin: 0;
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  /*border-bottom: 1px solid black;*/
 }
 
 ul {
   list-style-type: none;
-  float: left;
-  text-align: left;
+  padding: 0;
+}
+
+#contact-list {
+  margin: auto;
+  display: block;
+  width: 50%;
+}
+
+#contact-list > li {
+  font-size: 0.8em;
+  width: 100%;
+  color: grey;
+  padding-bottom: 5px; 
+}
+
+.video-controls {
+  margin-left: 17.5%;
+  margin-right: 17.5%;
+}
+
+.video-controls > div {
+  display: grid;
+}
+
+.video-controls > div > input {
+  width: 110px;
+}
+
+.video-controls > div > label {
+  font-size: 0.7em;
 }
 
 .container {
   overflow:auto;
+  margin-top: 6px;
 }
 
 #top-bar {
-  background-color:#333;
+  background-color:white;
+  box-shadow: 0 0px 7px 0 #969696;
   padding: 5px;
   height: 70px;
   overflow: hidden;
@@ -40,7 +103,7 @@ ul {
 
 #sidebar-left {
   float:left;
-  width:20%;
+  width: calc(20% - 14px);
   margin-top: 7px;
   margin-left: 7px;
   text-align:center;
@@ -69,7 +132,7 @@ ul {
   margin-top: 7px;
   display: inline-block;
   float:left;
-  width:58.7%;
+  width:60%;
   padding:0 10px;
 }
 
@@ -82,16 +145,31 @@ ul {
   border-radius: 50%;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
+a:hover {
+  color: lightblue;
+}
 
 body {
-  font-family:Verdana;
-  background-color:#aaaaaa;
+  font-family:"Helvetica";
+  background-color:#ebf2ff;
 }
 
 @media only screen and (max-width:620px) {
   /* For mobile phones: */
-  #sidebar-left, #content, #sidebar-right {
+  #sidebar-left, #sidebar-right {
+    width: calc(100% - 14px);
+  }
+  #sidebar-right {
+   margin-left: 7px;
+   width: calc(100% - 14px); 
+  }
+  #content{
     width:100%;
   }
 }
@@ -99,13 +177,9 @@ body {
 
 
 #top-img {
-  /* max-width: 100%; */
-  position: absolute;
-  /* left: 0px; */
-  float: left;
   padding: 10px;
-  height: 10%; 
-  width: 10%; 
+  height: 100%;
+  width: 100px;
 }
 
 
@@ -126,6 +200,9 @@ body {
 }
 .float-right {
   float: right;
+}
+.float-right > label {
+  font-size: 0.7em;
 }
 
 #google-map {
