@@ -20,21 +20,16 @@
   <div class="container">
     <aside id="sidebar-left" class="sidebars menuitem">
       <!-- add nav to the sidebars -->
-      <img src"https://www.davehompes.com/wp-content/uploads/2016/03/bigstock-Profile-Icon-Female-Avatar-Wom-99305540-100x100.jpg" alt="profile picture" id="profile-pic">
+      <img src="https://www.davehompes.com/wp-content/uploads/2016/03/bigstock-Profile-Icon-Female-Avatar-Wom-99305540-100x100.jpg" alt="profile picture" id="profile-pic">
       <h4>Jane Doe</h4>
     </aside>
 
-    <!-- Holds several articles (posts) -->
     <section id="content">
-      <div class="tab">
-        <button class="tablinks" onclick="openPost(event, 'formPost')">Post</button>
-        <button class="tablinks" onclick="openPost(event, 'mapPost')">Event</button>
-        <button class="tablinks" onclick="openPost(event, 'videoPost')">Video</button>
-        <button class="tablinks" onclick="openPost(event, 'videoPlayerPost')">Video Player</button>
-      </div>
-
-
-      <div id="formPost" class="tabcontent">
+      <!--Post #0-->
+      <article class="post">
+        <header class="post_header">
+          <h3><a href="#">Forms</a></h3>
+        </header>
         <form>
           <p>First name:</p>
           <input type="text" name="firstname" value="">
@@ -52,10 +47,18 @@
           <input type="text" name="post" value="">
           <br>
           <input type="submit" value="Submit">
-        </form>
-      </div>
+        </form>  
+        <footer class="post_author">
+          <span> <a href="#" >Comment</a></span>
+          <span> | <a href="#" >Like</a></span>
+          <span> | <a href="#" >Share</a></span>
+        </footer> 
+      </article>
 
-      <div id="mapPost" class="tabcontent">
+      <article class="post">
+        <header class="post_header">
+          <h3><a href="#">Maps</a></h3>
+        </header>
         <form>
           <div id="google-map"></div>
           <h3>Update Location:</h3>
@@ -76,10 +79,18 @@
             <br>
             <input type="button" id="update-map" value="Update the map"/>
           </div>
-        </form>
-      </div>
+        </form> 
+        <footer class="post_author">
+          <span> <a href="#" >Comment</a></span>
+          <span> | <a href="#" >Like</a></span>
+          <span> | <a href="#" >Share</a></span>
+        </footer> 
+      </article>
 
-      <div id="videoPost" class="tabcontent">
+      <article class="post">
+        <header class="post_header">
+          <h3><a href="#">Videos</a></h3>
+        </header>
         <video id="video" poster="https://openclipart.org/image/2400px/svg_to_png/221491/Movie-Projector-Icon.png" controls>
           <source id="videoSource" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d6/Elaphants_Dream.ogv/Elaphants_Dream.ogv.480p.webm" type="video/ogg" preload="metadata">
           </video>
@@ -103,15 +114,28 @@
             </div>
           </form>
           <canvas id="canvas"></canvas>
-        </div>
+        <footer class="post_author">
+          <span> <a href="#" >Comment</a></span>
+          <span> | <a href="#" >Like</a></span>
+          <span> | <a href="#" >Share</a></span>
+        </footer> 
+      </article>
 
-        <div id="videoPlayerPost" class="tabcontent">
-          <video id="videoJukeBox" controls onended="jukeBox()">
+      <article class="post">
+        <header class="post_header">
+          <h3><a href="#">Jukebox</a></h3>
+        </header>
+        <video id="videoJukeBox" controls onended="jukeBox()">
             <source id="sourceJukeBox" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/38/City_Hall_Memorial_for_Pulse_Victims.webm/City_Hall_Memorial_for_Pulse_Victims.webm.480p.webm" type="video/mp4">
           </video>
           <p id="videoMessage">Playing video 1/4</p>
-        </div>
-      </section>
+        <footer class="post_author">
+          <span> <a href="#" >Comment</a></span>
+          <span> | <a href="#" >Like</a></span>
+          <span> | <a href="#" >Share</a></span>
+        </footer> 
+      </article>
+    </section>
 
       <aside id="sidebar-right" class="sidebars">
         <!-- add nav and list to the sidebars -->

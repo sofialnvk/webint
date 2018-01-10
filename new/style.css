@@ -2,26 +2,70 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
+article {
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 3%
+}
+
+
 .container {
   overflow:auto;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#top-bar {
+  background-color:#333;
+  padding: 5px;
+  height: 70px;
+  overflow: hidden;
+}
+
+#sidebar-left, #sidebar-left, #content {
+  width: 100%;
+  float: left;
 }
 
 #sidebar-left {
-  float:left;
+  /*float:left;
   width:20%;
-  text-align:center;
+  margin-top: 7px;
+  margin-left: 7px;
+  text-align:center;*/
+  background-color: white;
+  margin-top: 7px;
+}
+
+#sidebar-right {
+  background-color: white;
+  margin-top: 7px;
+  /*float:left;
+  width:20%;
+  padding:15px;
+  margin-top: 7px;
+  margin-right: 7px;
+  text-align:center;*/
 }
 
 .menuitem {
   background-color:#333;
   padding:8px;
-  margin-top:0px;
+  margin-top:7px;
 }
 
 #content {
-  float:left;
-  width:60%;
-  padding:0 20px;
+  margin-top: 7px;
+  display: inline-block;
+  /*float:left;
+  margin-top: 7px;
+  width:58.7%;
+  padding:0 10px;*/
 }
 
 #profile-pic{
@@ -30,28 +74,50 @@
   width: 70%;
   height: 70%;
   display: block;
+  border-radius: 50%;
 }
 
-#sidebar-right {
-  background-color:#333;
-  float:left;
-  width:20%;
-  padding:15px;
-  margin-top:0px;
-  text-align:center;
-}
+
 
 body {
   font-family:Verdana;
-  color:#aaaaaa;
-  margin: 0;
+  background-color:#aaaaaa;
 }
 
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
+/*@media only screen and (max-width:620px) {
+  /* For mobile phones: 
   #sidebar-left, #content, #sidebar-right {
     width:100%;
   }
+}*/
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  #content {
+    width: 50%;
+    float: left;
+  }
+
+  #sidebar-left {
+    width: 25%;
+    float: left;
+
+  }
+
+  #sidebar-right {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    margin: 0 auto;
 }
 
 #top-img {
@@ -64,12 +130,6 @@ body {
   width: 10%; 
 }
 
-#top-bar {
-  background-color:#333;
-  padding: 5px;
-  height: 70px;
-  overflow: hidden;
-}
 
 #foot-note{
   position: relative;
@@ -88,37 +148,6 @@ body {
     background-color: #f1f1f1;
 }
 
-/* Style the buttons inside the tab */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-    height: 450px;
-}
-
 /* FORM 2 - GEO-LOCATION AND MAP */
 .float-left {
   width: 40%;
@@ -133,7 +162,7 @@ body {
     background-color: white; 
     border: 2px #ccc solid; 
     width:100%;
-    height:400px;
+    height:200px;
 }
 
 /* FORM 3 - VIDEO */

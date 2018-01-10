@@ -1,5 +1,5 @@
 /* Tab bar for what kind of post you want to create */
-function openPost(evt, postName) {
+/*function openPost(evt, postName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -11,7 +11,7 @@ function openPost(evt, postName) {
     }
     document.getElementById(postName).style.display = "block";
     evt.currentTarget.className += " active";
-}
+}*/
 
 
 /* MAP CODE */
@@ -32,9 +32,9 @@ if(!!navigator.geolocation) {
                 map: map,
                 position: geolocate,
                 content:
-                    '<h1>Location pinned from HTML5 Geolocation!</h1>' +
-                    '<h2>Latitude: ' + position.coords.latitude + '</h2>' +
-                    '<h2>Longitude: ' + position.coords.longitude + '</h2>'
+                    '<h2>Your location:</h3>' +
+                    '<h3>Lat: ' + position.coords.latitude + '</h3>' +
+                    '<h3>Long: ' + position.coords.longitude + '</h3>'
             });
             map.setCenter(geolocate);
             google.maps.event.trigger(map, 'resize');
