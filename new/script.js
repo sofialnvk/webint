@@ -1,19 +1,3 @@
-/* Tab bar for what kind of post you want to create */
-/*function openPost(evt, postName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(postName).style.display = "block";
-    evt.currentTarget.className += " active";
-}*/
-
-
 /* MAP CODE */
 function myMap() {
 
@@ -96,21 +80,6 @@ function setStartTime() {
     var setTime = document.getElementById('newTime').value;
     vid.currentTime = setTime;
 } 
-
-/*
-/* Fix this!! enable button when field is not empty
-function enableBtn() {
-  /* var url = document.getElementById('newUrl').value;
-  if (url != '') {
-    document.getElementById("update-url").disabled = false; 
-  } 
-  var url = document.getElementById('newUrl');
-  btn = document.getElementById('update-url');
-  if (url.value){
-    btn.disabled = false;
-  }
-}
-*/
 
 /* VIDEO CODE */
 function updateUrl() {

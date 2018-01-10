@@ -58,17 +58,17 @@ ul {
   padding: 0;
 }
 
-#contact-list {
+#contact-list, #category-list, #archive-list {
   margin: auto;
   display: block;
   width: 50%;
 }
 
-#sidebar-right > h2 {
-  color: grey;
+h2 {
+  color: gray;
 }
 
-#contact-list > li {
+li {
   font-size: 0.8em;
   width: 100%;
   color: gray;
@@ -178,8 +178,6 @@ body {
   }
 }
 
-
-
 #top-img {
   padding: 10px;
   height: 100%;
@@ -233,5 +231,8 @@ video {
   object-fit: cover;
 }
 
+#add-image {
+  max-width: 95%;
+}
 
 
