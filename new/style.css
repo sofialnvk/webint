@@ -148,5 +148,7 @@ video {
   text-align: center;
 }
 
-
+#mirror-canvas {
+  border: 1px solid #202020;
+}
 

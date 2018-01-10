@@ -141,3 +141,24 @@ function displayControls() {
         video.controls = true;
     }
 }
+
+//Mirror video into canvas
+var canvass = document.getElementById('mirror-canvas');
+var videooo  = document.getElementById('video');
+var context = canvass.getContext('2d');
+// translate context to center of canvas
+context.translate(canvass.width / 2, canvass.height / 2);
+// flip context vertically
+context.scale(1, -1);
+
+
+videooo.addEventListener('play', function () {
+    var $this = this; //cache
+    (function loop() {
+        if (!$this.paused && !$this.ended) {
+            context.drawImage($this, 0, 0);
+            setTimeout(loop, 1000 / 30); // drawing at 30fps
+        }
+    })();
+}, 0);
+
