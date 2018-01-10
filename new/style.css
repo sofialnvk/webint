@@ -4,13 +4,13 @@
 
 body {
   margin: 0;
-  font-family: "Helvetica"
+  font-family: "Helvetica";
 }
 
 aside {
   box-shadow: 0 0px 7px 0 #969696;
   border-radius: 4px;
-    padding: 5px;
+  padding: 5px;
 }
 
 article.post td > p {
@@ -33,11 +33,11 @@ article.post > form > input {
 }
 
 article.post {
-    border-radius: 4px;
-    padding: 5px;
-    background-color: white;
-    margin-bottom: 10px;
-    box-shadow: 0 0px 7px 0 #969696;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: white;
+  margin-bottom: 10px;
+  box-shadow: 0 0px 7px 0 #969696;
 }
 
 header.post_header {
@@ -50,7 +50,6 @@ h3 {
   margin: auto;
   width: 90%;
   text-align: center;
-  /*border-bottom: 1px solid black;*/
 }
 
 ul {
@@ -194,8 +193,6 @@ body {
   text-align: center;
 }
 
-
-/* FORM 2 - GEO-LOCATION AND MAP */
 .float-left {
   width: 40%;
   float: left;
@@ -208,14 +205,13 @@ body {
 }
 
 #google-map {
-    margin: 1em auto; 
-    background-color: white; 
-    border: 2px #ccc solid; 
-    width:100%;
-    height:200px;
+  margin: 1em auto; 
+  background-color: white; 
+  border: 2px #ccc solid; 
+  width:100%;
+  height:200px;
 }
 
-/* FORM 3 - VIDEO */
 video {
   width: 65%;
   height: 40%;

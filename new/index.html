@@ -12,32 +12,25 @@
 </head>
 
 <body>
-
   <header id="top-bar">
-    <!-- <h1>Hello World</h1> -->
     <img src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg" alt="logo" id="top-img">
   </header>
 
   <div class="container">
     <aside id="sidebar-left" class="sidebars menuitem">
-      <!-- add nav to the sidebars 
-      <img src="https://www.davehompes.com/wp-content/uploads/2016/03/bigstock-Profile-Icon-Female-Avatar-Wom-99305540-100x100.jpg" alt="profile picture" id="profile-pic">
-      <h4>Jane Doe</h4>-->
-
       <nav>
-      <ul>
-        <li><img src="https://www.davehompes.com/wp-content/uploads/2016/03/bigstock-Profile-Icon-Female-Avatar-Wom-99305540-100x100.jpg" alt="profile picture" id="profile-pic"></li>
-        <li><a href="#"><h4>Jane Doe</h4></a></li> 
-        <li><a href="#">Chat</a></li>
-        <li><a href="#">Groups</a></li>
-        <li><a href="#">Pages</a></li>
-      </ul>
-    </nav>
-    <img id="add-image" src="http://360rumors.com/wp-content/uploads/2017/11/23845439_147726062530400_1353514416_n.jpg" alt="Advertisement">
+        <ul>
+          <li><img src="https://www.davehompes.com/wp-content/uploads/2016/03/bigstock-Profile-Icon-Female-Avatar-Wom-99305540-100x100.jpg" alt="profile picture" id="profile-pic"></li>
+          <li><a href="#"><h4>Jane Doe</h4></a></li> 
+          <li><a href="#">Chat</a></li>
+          <li><a href="#">Groups</a></li>
+          <li><a href="#">Pages</a></li>
+        </ul>
+      </nav>
+      <img id="add-image" src="http://360rumors.com/wp-content/uploads/2017/11/23845439_147726062530400_1353514416_n.jpg" alt="Advertisement">
     </aside>
 
     <section id="content">
-      <!--Post #0-->
       <article class="post">
         <header class="post_header">
           <h3>Forms</h3>
@@ -102,7 +95,6 @@
         <form>
           <div id="google-map"></div>
           <h4>Update Location:</h4>
-
             <table>
             <tr>
               <td>
@@ -137,17 +129,8 @@
               </td>
             </tr>
           </table>
-            <!-- 
-            <p>Street:</p>
-            <input id="street" type="text" name="street" value="">
-            <p>City:</p>
-            <input type="text" name="city" value="">
-            <p>Zip Code:</p>
-            <input type="text" name="zipCode" value="">
-            <p>Country:</p>
-            <input type="text" name="country" value=""> -->
-            <br>
-            <input type="button" class="button" id="update-map" value="Update the map"/>
+          <br>
+          <input type="button" class="button" id="update-map" value="Update the map"/>
         </form> 
         <footer class="post_author">
           <span> <a>Comment</a></span>
@@ -165,25 +148,25 @@
             <source id="videoSource" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d6/Elaphants_Dream.ogv/Elaphants_Dream.ogv.480p.webm" type="video/ogg">
           </video>
         </div>
-          <form class="video-controls">
-            <div class="float-left">
-              <input type="url" name="newUrl" id="newUrl" placeholder="New url">
-              <input type="text" name="startTime" id="newTime" placeholder="Start time">
-              <input type="button" id="preview" onclick="capture()" value="Preview"/>
-              <label>Hide default controls:</label>
-            </div>
-            <div class="float-right">
-              <input type="button" id="update-url" onclick="updateUrl()" value="Update">
-              <input type="button" id="update-start-time" onclick="setStartTime()" value="Jump to"/>
-              <input type="button" id="rotate" onclick="rotateVideo()" value="Rotate"/>      
-              <input id="checkBox" onclick="displayControls()" type="checkbox">
-            </div>
-          </form>
-          <canvas id="canvas"></canvas>
-          <canvas id="mirror-canvas"></canvas>
-          <video id="video1" poster="https://openclipart.org/image/2400px/svg_to_png/221491/Movie-Projector-Icon.png" controls>
-            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/36/History_of_the_Lake_Eola_Fountain.webm/History_of_the_Lake_Eola_Fountain.webm.240p.webm" type="video/ogg">
-          </video>
+        <form class="video-controls">
+          <div class="float-left">
+            <input type="url" name="newUrl" id="newUrl" placeholder="New url">
+            <input type="text" name="startTime" id="newTime" placeholder="Start time">
+            <input type="button" id="preview" onclick="capture()" value="Preview"/>
+            <label>Hide default controls:</label>
+          </div>
+          <div class="float-right">
+            <input type="button" id="update-url" onclick="updateUrl()" value="Update">
+            <input type="button" id="update-start-time" onclick="setStartTime()" value="Jump to"/>
+            <input type="button" id="rotate" onclick="rotateVideo()" value="Rotate"/>      
+            <input id="checkBox" onclick="displayControls()" type="checkbox">
+          </div>
+        </form>
+        <canvas id="canvas"></canvas>
+        <canvas id="mirror-canvas"></canvas>
+        <video id="video1" poster="https://openclipart.org/image/2400px/svg_to_png/221491/Movie-Projector-Icon.png" controls>
+          <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/36/History_of_the_Lake_Eola_Fountain.webm/History_of_the_Lake_Eola_Fountain.webm.240p.webm" type="video/ogg">
+        </video>
         <footer class="post_author">
           <span> <a href="#" >Comment</a></span>
           <span> | <a href="#" >Like</a></span>
@@ -200,7 +183,7 @@
             <source id="sourceJukeBox" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/38/City_Hall_Memorial_for_Pulse_Victims.webm/City_Hall_Memorial_for_Pulse_Victims.webm.480p.webm" type="video/mp4">
           </video>
         </div>
-          <p id="videoMessage">Playing video 1/4</p>
+        <p id="videoMessage">Playing video 1/4</p>
         <footer class="post_author">
           <span> <a href="#" >Comment</a></span>
           <span> | <a href="#" >Like</a></span>
@@ -209,49 +192,48 @@
       </article>
     </section>
 
-      <aside id="sidebar-right" class="sidebars">
-        <!-- add nav and list to the sidebars -->
-        <h2>Contact List</h2>
-        <ul id="contact-list">
-          <li>Bonny Mar</li>
-          <li>Bonny Mar</li>
-          <li>Adam Flett</li>
-          <li>Lou Proehl</li>
-          <li>Khalilah Faith</li>
-          <li>Tony Cruse</li>
-          <li>Kaitlin Brill</li>
-          <li>Santana Murguia</li>
-          <li>Errol Backstrom</li>
-          <li>Dannielle Curnutte</li>
-          <li>Frederick Sweigart</li>
+    <aside id="sidebar-right" class="sidebars">
+      <!-- add nav and list to the sidebars -->
+      <h2>Contact List</h2>
+      <ul id="contact-list">
+        <li>Bonny Mar</li>
+        <li>Bonny Mar</li>
+        <li>Adam Flett</li>
+        <li>Lou Proehl</li>
+        <li>Khalilah Faith</li>
+        <li>Tony Cruse</li>
+        <li>Kaitlin Brill</li>
+        <li>Santana Murguia</li>
+        <li>Errol Backstrom</li>
+        <li>Dannielle Curnutte</li>
+        <li>Frederick Sweigart</li>
+      </ul>
+
+      <nav>
+        <h2>Categories</h2>
+        <ul>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Photos</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Others</a></li>
         </ul>
+      </nav>
 
-        <nav>
-          <h2>Categories</h2>
-          <ul>
-            <li><a href="#">Music</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Photos</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Others</a></li>
-          </ul>
-        </nav>
-        <nav>
-          <h2>History</h2>
-          <ul>
-            <li><a href="#">August 2017</a></li>
-            <li><a href="#">September 2017</a></li>
-            <li><a href="#">October 2017</a></li>
-            <li><a href="#">November 2017</a></li>
-            <li><a href="#">December 2017</a></li>
-            <li><a href="#">January 2018</a></li>
-          </ul>
-        </nav>  
+      <nav>
+        <h2>History</h2>
+        <ul>
+          <li><a href="#">August 2017</a></li>
+          <li><a href="#">September 2017</a></li>
+          <li><a href="#">October 2017</a></li>
+          <li><a href="#">November 2017</a></li>
+          <li><a href="#">December 2017</a></li>
+          <li><a href="#">January 2018</a></li>
+        </ul>
+      </nav> 
 
-      </aside>
+    </aside>
     </div>
-
-    <footer id="foot-note">Social Network | WebInt 2018</footer>  
-
-  </body>
-  </html>
+  <footer id="foot-note">Social Network | WebInt 2018</footer>  
+</body>
+</html>
